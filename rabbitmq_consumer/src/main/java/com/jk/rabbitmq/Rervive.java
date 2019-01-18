@@ -22,4 +22,12 @@ public class Rervive {
     public void TestUser(User user){
         System.out.println(user.getUserName()+" "+user.getPassword());
     }
+    @RabbitListener(queues = "manytoMany")
+    public void rerviceManyOne(String message){
+        System.out.println("service1  "+message);
+    }
+    @RabbitListener(queues = "manytoMany")
+    public void rerviceManyTwo(String message){
+        System.out.println("service2  "+message);
+    }
 }
