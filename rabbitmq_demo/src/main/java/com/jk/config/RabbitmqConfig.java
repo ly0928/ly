@@ -18,4 +18,8 @@ public class RabbitmqConfig {
     public Queue sendUser(){
         return new Queue("user");
     }
+    @Bean
+    public Queue sendMany(){
+        return new Queue("manytoMany");
+    }
 }

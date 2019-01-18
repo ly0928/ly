@@ -39,4 +39,11 @@ public class RabbtimqController {
     public void TestUser(){
         send.SendUser();
     }
+    @GetMapping("/manytoMany")
+    public void manytoMany(){
+        for(int i=0;i<10;i++){
+            send.Sender1(" "+i);
+            send.Sender2(" "+i);
+        }
+    }
 }

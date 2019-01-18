@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class Fanout {
     @Autowired
     RabbitTemplate rabbitTemplate;
+    //广播模式或者队列
     public String fanout(){
         rabbitTemplate.convertAndSend("fanoutExchange","","fanoutSend");
         return "ok";

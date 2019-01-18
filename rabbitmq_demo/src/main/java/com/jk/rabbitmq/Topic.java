@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class Topic {
     @Autowired
     RabbitTemplate rabbitTemplate;
+    //规则投递消息
     public void topicMessage(){
         rabbitTemplate.convertAndSend("topicExchange","topic.message","ok");
     }
